@@ -88,7 +88,7 @@ function Rutinas() {
                 aria-expanded="false"
                 aria-controls="collapseRutinas"
               >
-                Rutinas dinámicas
+                Tus rutinas agregadas:
               </button>
             </h2>
             <div
