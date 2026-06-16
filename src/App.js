@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ProgressChart from "./ProgressChart";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import ProgressChart from "./ProgressChart";
 import Rutinas from "./Rutinas";
 
 function App() {
@@ -22,11 +21,10 @@ function App() {
         </div>
       </nav>
 
-      {/* Body 👇 aquí lo llamas */}
-       <Rutinas />
+      {/* Body 👇 */}
+      <Rutinas />
       <Body />
-       <Footer />
-         
+      <Footer />
     </div>
   );
 }
@@ -35,65 +33,64 @@ function Body() {
   return (
     <main className="body">
       <section id="rutinas" className="section">
-       <h2 style={{ textAlign: "center" }}>Rutinas del Día 🏋️‍♀️</h2>
+        <h2 style={{ textAlign: "center" }}>Rutinas del Día 🏋️‍♀️</h2>
 
-       <div className="cards d-flex justify-content-center gap-3">
-         {/* Accordion con cards adentro */}
-        <div className="accordion" id="accordionRutinas">
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingLunes">
-              <button 
-                className="accordion-button collapsed" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#collapseLunes" 
-                aria-expanded="false" 
-                aria-controls="collapseLunes"
+        <div className="cards d-flex justify-content-center gap-3">
+          {/* Accordion con cards */}
+          <div className="accordion" id="accordionRutinas">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingLunes">
+                <button 
+                  className="accordion-button collapsed" 
+                  type="button" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#collapseLunes" 
+                  aria-expanded="false" 
+                  aria-controls="collapseLunes"
+                >
+                  Rutina del Lunes
+                </button>
+              </h2>
+              <div 
+                id="collapseLunes" 
+                className="accordion-collapse collapse" 
+                aria-labelledby="headingLunes" 
+                data-bs-parent="#accordionRutinas"
               >
-                Rutina del Lunes
-              </button>
-            </h2>
-            <div 
-              id="collapseLunes" 
-              className="accordion-collapse collapse" 
-              aria-labelledby="headingLunes" 
-              data-bs-parent="#accordionRutinas"
-            >
-              <div className="accordion-body">
-                <div className="cards d-flex justify-content-center gap-3">
-                  
-  <div className="card">
-    <h3>Pecho</h3>
-    <p>Press banca - 4x11</p>
-    <img src="/pressbanca.jpg" width="150" />
-  </div>
+                <div className="accordion-body">
+                  <div className="cards d-flex justify-content-center gap-3">
+                    
+                    <div className="card">
+                      <h3>Pecho</h3>
+                      <p>Press banca - 4x11</p>
+                      <img src="/pressbanca.jpg" alt="Press banca" width="150" />
+                    </div>
 
-  <div className="card">
-    <h3>Espalda</h3>
-    <p>Dominadas - 3x8</p>
-    <img src="/Dominadas.jpg" alt="Dominadas" width="150" />
-  </div>
+                    <div className="card">
+                      <h3>Espalda</h3>
+                      <p>Dominadas - 3x8</p>
+                      <img src="/Dominadas.jpg" alt="Dominadas" width="150" />
+                    </div>
 
-  <div className="card">
-    <h3>Cardio</h3>
-    <p>30 min cinta</p>
-    <img src="cardio.jpg" alt="Cinta" width="150" />
-  </div>
-</div>
- </div>
+                    <div className="card">
+                      <h3>Cardio</h3>
+                      <p>30 min cinta</p>
+                      <img src="/cardio.jpg" alt="Cinta" width="150" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-     
 
-     <section id="progreso" className="section">
-  <h2 style={{ textAlign: "center" }}>Tu Progreso 📈</h2>
-  <div className="chart-container">
-    <ProgressChart />
-  </div>
-</section>
+      <section id="progreso" className="section">
+        <h2 style={{ textAlign: "center" }}>Tu Progreso 📈</h2>
+        <div className="chart-container">
+          <ProgressChart />
+        </div>
+      </section>
 
       <section id="contacto" className="section">
         <h2>Contacto 🤝</h2>
@@ -107,6 +104,7 @@ function Body() {
     </main>
   );
 }
+
 function Footer() {
   return (
     <footer className="bg-dark text-white text-center py-3 mt-5">
@@ -124,4 +122,5 @@ function Footer() {
 }
 
 export default App;
+
 
