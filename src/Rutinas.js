@@ -81,19 +81,19 @@ function Rutinas() {
           <div className="accordion-item">
             <h2 className="accordion-header" id="headingRutinas">
               <button
-                className="accordion-button collapsed"
+                className="accordion-button "
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseRutinas"
-                aria-expanded="false"
+                aria-expanded="true"
                 aria-controls="collapseRutinas"
               >
-                Tus rutinas agregadas:
+                Rutinas dinámicas
               </button>
             </h2>
             <div
               id="collapseRutinas"
-              className="accordion-collapse collapse"
+              className="accordion-collapse collapse show"
               aria-labelledby="headingRutinas"
               data-bs-parent="#accordionRutinas"
             >
